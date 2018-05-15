@@ -16,6 +16,6 @@ function exactMatch(drivers, obj) {
   key = Object.keys(obj)[0]
   value = Object.keys(obj)[0]
   return drivers.filter(function(driver) {
-    return driver === Object.assign({}, driver, obj)
+    return driver['key'] === value
   })
 }
