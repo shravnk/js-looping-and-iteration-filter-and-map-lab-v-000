@@ -19,3 +19,11 @@ function exactMatch(drivers, obj) {
     return driver[key] === value
   })
 }
+
+function exactMatchToList(drivers, obj) {
+  const key = Object.keys(obj)[0]
+  const value = Object.values(obj)[0]
+  return drivers.filter(function(driver) {
+    return driver[key] === value
+  })
+}
