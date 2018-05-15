@@ -21,9 +21,6 @@ function exactMatch(drivers, obj) {
 }
 
 function exactMatchToList(drivers, obj) {
-  const key = Object.keys(obj)[0]
-  const value = Object.values(obj)[0]
-  return drivers.filter(function(driver) {
-    return driver[key] === value
+  return exactMatch(drivers, obj).map(function(driver) {return driver.name})
   })
 }
